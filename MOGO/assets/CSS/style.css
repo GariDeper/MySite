@@ -1,0 +1,427 @@
+body{
+   margin: 0;
+   font-family: 'Montserrat', sans-serif;
+
+   font-size: 15px;
+   line-height: 1.6;
+   color: #333;
+}
+
+
+*
+*:before
+*:after{
+   box-sizing: border-box;
+}
+
+/*H*/
+h1, h2, h3, h4, h5, h6{
+   margin: 0;
+}
+
+
+/* Continer */
+.container{
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+
+/* Intro */
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+    
+  background: url("../imeges/fone1.jpg") center
+  no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro_suptitel{
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 30px;
+    
+}
+
+.intro__title{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 140px;
+    
+    color: #fff;
+}
+
+.intro__title:after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 70px auto 0;
+    
+    background-color: #fff;
+    
+}
+
+
+/* Header */
+.header{
+  width: 100%;
+  padding-top: 30px;
+    
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    animation: move 0.9s infinite;
+}
+
+.header__logo:hover{
+    color: #0000;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+
+/* Icon Shopping Serch */
+
+.SHOPPING_CART {
+  position: absolute;
+  left: 1484px;
+  top: 45px;
+  width: 18px;
+  height: 15px;
+  z-index: 13;
+}
+
+.shopping__link{
+    opacity: 1;
+}
+
+.shopping__link:hover{
+    background-color: #fce38a
+    opacity: 0.5;
+    content: "";
+    display: block
+}
+
+.MAGNIFYING_GLASS {
+  /*background-color: rgb(255, 255, 255);*/
+  position: absolute;
+  left: 1544px;
+  top: 43px;
+  width: 18px;
+  height: 18px;
+  z-index: 14;
+}
+
+
+/* Navigation */
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 60px;
+    position: relative;
+    
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.1s linear;
+}
+
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    
+    
+    background-color: #fce38a;
+    opacity: 0;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    
+    transition: opacity 0.1s linear;
+}
+
+.nav__link:hover{
+    color: #fce38a;
+    
+}
+
+.nav__link:hover:after{
+    opacity: 1;
+}
+
+
+/* Button */
+.btn{   
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 35px;
+    margin: 50px auto 0;
+    transition: color 0.5s linear, background 0.2s linear;
+    
+    border: 2px solid #fff;
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Slaider */
+.slaider{
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slaider_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.slaider__item{
+    width: 23%;
+    padding: 20px 0 ;
+    opacity: 0.7;
+    position: relative;
+    
+    border-top: 3px solid #fff;
+    
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.slaider__item.active{
+    opacity: 1;
+}
+
+.slaider__item.active:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    
+    background-color: #f38181;
+    
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.slaider__num{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* Section */
+
+.section{
+    padding: 80px 0;
+}
+
+.section__header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    
+    text-align: center;
+}
+
+.section__subtitel{
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.section__titel{
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__titel:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin:  30px auto;
+    
+    background-color: #f38181;
+}
+
+.section__text{
+    font-size: 15px;
+    color: #999;
+}
+
+
+/* About */
+
+.about{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item{
+    width: 380px;
+    position: relative;
+    
+    background-color: #95e1d3
+}
+
+.about__item:hover .about__img{
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.about__item:hover .about__img img{
+    opacity: .1;
+}
+
+.about__item:hover .about__text{
+    opacity: 1;
+}
+
+.about__img{
+    background: linear-gradient(to bottom, #f38181,#fce38a);
+    
+    transition: transform .2s linear;
+}
+
+.about__img img{
+    display: block;
+    transition: opacity 0.1s linear;    
+}
+
+.about__text{
+    width: 100%;
+    
+    font-size: 18px;    
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0,-50%,0);
+    
+    transition: opacity .2s linear;
+}
+
+
+/* Statistics */
+
+.statistics{
+    background-color: #95e1d3;  
+}
+
+.stat{
+    display: flex;
+}
+
+.stat__item{
+    flex: 1 1 0;
+    padding: 70px 25px;
+    
+    border-left: 1px solid #b5eae0;
+    
+    text-align: center;
+    
+    color: #fff;
+}
+
+
+.stat__item:last-child{
+    border-right: 1px solid #b5eae0;
+}
+
+
+
+.stat__count{
+    margin-bottom: 10px;
+    
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text{
+    font-size: 14px;  
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
